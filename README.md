@@ -8,6 +8,19 @@ O sistema integra páginas frontend a um banco de dados relacional em MySQL por 
 
 ---
 
+## 👥 Equipe de Desenvolvimento
+
+| Integrante | Função / Responsabilidade | GitHub |
+| :--- | :--- | :--- |
+| **Danielli Gonsalves Martins** | **DEV** | [Danielli](https://github.com/daniellimartins) |
+| **Eduardo Farias Moreira** | **S.M.** | [Eduardo](https://github.com/EduFM202) |
+| **Júlia Vitória Silva Sanches** | **DEV** | [Júlia](https://github.com/JuVitori) |
+| **Samilly Matos Barranova** | **DEV** | [Samilly](https://github.com/matossamilly) |
+| **Thiago Marcelino Vieira** | **P.O.** | [Thiago](https://github.com/ThiagoMarcelinoVieira) |
+
+
+---
+
 ## ✨ Funcionalidades Implementadas
 
 - **🔐 Autenticação e Controle de Sessão:**
