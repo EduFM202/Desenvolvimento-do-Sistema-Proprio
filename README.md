@@ -10,7 +10,7 @@ O sistema integra páginas frontend a um banco de dados relacional em MySQL por 
 
 ## 👥 Equipe de Desenvolvimento
 
-| Integrante | Função / Responsabilidade | GitHub |
+| Integrante | Função | GitHub |
 | :--- | :--- | :--- |
 | **Danielli Gonsalves Martins** | **DEV** | [Danielli](https://github.com/daniellimartins) |
 | **Eduardo Farias Moreira** | **S.M.** | [Eduardo](https://github.com/EduFM202) |
