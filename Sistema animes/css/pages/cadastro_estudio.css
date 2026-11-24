@@ -1,0 +1,337 @@
+/* =========================================
+   CABEÇALHO DA PÁGINA
+   ========================================= */
+.page-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: none;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.page-header-bar h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--branco);
+  text-shadow: 0px 0px 20px var(--preto);
+}
+
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  background-color: var(--roxo-escuro);
+  color: var(--branco);
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+}
+
+.btn-back:hover {
+  border-color: var(--rosa-neon);
+  color: var(--azul-eletrico);
+  box-shadow: 0 0 12px rgba(0, 217, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+/* Backgound */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+
+  background-color: var(--preto);
+  background-image: url("../../assets/studiosBG.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* =========================================
+   FORMULÁRIO DE CADASTRO
+   ========================================= */
+form {
+  background-color: #17152ea1;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  padding: 28px;
+  border-radius: 12px;
+  border: 1px solid rgba(138, 92, 246, 0.132);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 40px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--branco);
+}
+
+.form-group label span {
+  color: var(--rosa-neon);
+  font-weight: 700;
+}
+
+.form-group input {
+  background-color: var(--preto);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  color: var(--branco);
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-family: var(--font);
+  font-size: 0.92rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: rgba(226, 232, 240, 0.4);
+}
+
+.form-group input:focus {
+  border-color: var(--azul-eletrico);
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.2);
+}
+
+.form-group small {
+  font-size: 0.78rem;
+  color: rgba(226, 232, 240, 0.6);
+  margin-top: 6px;
+}
+
+/* Botão de upload de logo */
+input[type="file"] {
+  padding: 9px 12px;
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: var(--roxo-neon);
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-family: var(--font);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 12px;
+  transition: background-color 0.2s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: var(--rosa-neon);
+}
+
+/* Botão Cadastrar */
+.form-actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--roxo-neon), var(--rosa-neon));
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-family: var(--font);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5);
+  filter: brightness(1.08);
+}
+
+/* =========================================
+   TABELA DE ESTÚDIOS CADASTRADOS
+   ========================================= */
+h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--branco);
+  text-shadow: 0px 0px 20px var(--preto);
+}
+
+.table-container {
+  background-color: #17152ea1;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  border-radius: 12px;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  box-shadow: var(--shadow-md);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead {
+  background-color: rgba(9, 11, 24, 0.7);
+}
+
+th {
+  padding: 14px 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--azul-eletrico);
+  border-bottom: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+  vertical-align: middle;
+  font-size: 0.92rem;
+}
+
+tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+  background-color: rgba(139, 92, 246, 0.08);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Colunas, Logos e Placeholder "Sem foto" */
+.col-foto { width: 90px; }
+.col-acoes { width: 250px; }
+
+.table-thumbnail {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  box-shadow: var(--shadow-sm);
+}
+
+.no-image {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  background-color: var(--preto);
+  border: 1px dashed rgba(139, 92, 246, 0.45);
+  color: rgba(226, 232, 240, 0.5);
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Botões de Ação */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-edit,
+.btn-delete,
+.btn-anime {
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-edit {
+  background-color: rgba(0, 217, 255, 0.12);
+  color: var(--azul-eletrico);
+  border: 1px solid rgba(0, 217, 255, 0.35);
+}
+
+.btn-edit:hover {
+  background-color: var(--azul-eletrico);
+  color: var(--preto);
+  font-weight: 600;
+}
+
+.btn-delete {
+  background-color: rgba(158, 33, 96, 0.25);
+  color: #ff6b9d;
+  border: 1px solid var(--rosa-escuro);
+}
+
+.btn-delete:hover {
+  background-color: var(--rosa-escuro);
+  color: #fff;
+}
+
+.btn-anime {
+  background-color: rgba(139, 92, 246, 0.18);
+  color: #c4b5fd;
+  border: 1px solid rgba(139, 92, 246, 0.45);
+}
+
+.btn-anime:hover {
+  background-color: var(--roxo-neon);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.45);
+}
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions .btn-primary {
+    width: 100%;
+  }
+}

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Novo Estúdio — AniWorld</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/pages/cadastro_estudio.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="page-header-bar">
+        <h2>🎬 Novo Estúdio</h2>
+        <div class="header-actions">
+          <a href="index.html" class="btn-back">⬅ Voltar ao Menu</a>
+        </div>
+      </div>
+
+      <form method="post" action="" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="" />
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nome">Nome do Estúdio <span>*</span></label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              required
+              placeholder="Ex: MAPPA, Studio Ghibli…"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="genero">Gênero Principal <span>*</span></label>
+            <input
+              type="text"
+              id="genero"
+              name="genero"
+              required
+              placeholder="Ex: Ação, Fantasia, Shonen…"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="ano_criacao">Ano de Criação</label>
+            <input
+              type="number"
+              id="ano_criacao"
+              name="ano_criacao"
+              min="1900"
+              max="2026"
+              placeholder="Ex: 1985, 2011…"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="imagem">Logo / Imagem do Estúdio</label>
+            <input type="file" id="imagem" name="imagem" accept="image/*" />
+            <small>JPG ou PNG · Máximo 5 MB</small>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">➕ Cadastrar</button>
+        </div>
+      </form>
+
+      <h3>📋 Estúdios Cadastrados</h3>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th class="col-foto">Imagem</th>
+              <th>Nome</th>
+              <th>Gênero</th>
+              <th>Ano de Criação</th>
+              <th class="col-acoes">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img
+                  src="assets/banner.jpeg"
+                  alt="Studio Ghibli"
+                  class="table-thumbnail"
+                />
+              </td>
+              <td>Studio Ghibli</td>
+              <td>Fantasia / Aventura</td>
+              <td>1985</td>
+              <td>
+                <div class="action-buttons">
+                  <a href="#" class="btn-edit">✏️ Editar</a>
+                  <a href="#" class="btn-delete">🗑️</a>
+                  <a href="cadastro_anime.html" class="btn-anime">🎬 Animes</a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="assets/solo-leveling.png"
+                  alt="A-1 Pictures"
+                  class="table-thumbnail"
+                />
+              </td>
+              <td>A-1 Pictures</td>
+              <td>Ação / Fantasia</td>
+              <td>2005</td>
+              <td>
+                <div class="action-buttons">
+                  <a href="#" class="btn-edit">✏️ Editar</a>
+                  <a href="#" class="btn-delete">🗑️</a>
+                  <a href="cadastro_anime.html" class="btn-anime">🎬 Animes</a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="no-image">Sem<br />foto</div>
+              </td>
+              <td>Studio Pierrot</td>
+              <td>Shonen / Sobrenatural</td>
+              <td>1979</td>
+              <td>
+                <div class="action-buttons">
+                  <a href="#" class="btn-edit">✏️ Editar</a>
+                  <a href="#" class="btn-delete">🗑️</a>
+                  <a href="cadastro_anime.html" class="btn-anime">🎬 Animes</a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

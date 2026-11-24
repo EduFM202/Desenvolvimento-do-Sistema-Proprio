@@ -1,0 +1,321 @@
+/* =========================================
+   CABEÇALHO DA PÁGINA
+   ========================================= */
+.page-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.25);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.page-header-bar h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--branco);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* =========================================
+   BOTÕES GERAIS DA PÁGINA
+   ========================================= */
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  background-color: var(--roxo-escuro);
+  color: var(--branco);
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+}
+
+.btn-back:hover {
+  border-color: var(--azul-eletrico);
+  color: var(--azul-eletrico);
+  box-shadow: 0 0 12px rgba(0, 217, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--roxo-neon), var(--rosa-neon));
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-family: var(--font);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5);
+  filter: brightness(1.08);
+}
+
+/* =========================================
+   BARRA DE FILTROS
+   ========================================= */
+.filters {
+  background-color: var(--roxo-escuro);
+  padding: 22px 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 28px;
+}
+
+.filter-form {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 16px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-item label {
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: rgba(226, 232, 240, 0.85);
+}
+
+.filter-item input,
+.filter-item select {
+  background-color: var(--preto);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  color: var(--branco);
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-family: var(--font);
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.filter-item input::placeholder {
+  color: rgba(226, 232, 240, 0.4);
+}
+
+.filter-item input:focus,
+.filter-item select:focus {
+  border-color: var(--azul-eletrico);
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.2);
+}
+
+.filter-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Ajuste para o botão Limpar dentro dos filtros usar o fundo escuro */
+.filter-actions .btn-back {
+  background-color: var(--preto);
+}
+
+/* =========================================
+   TABELA DA BIBLIOTECA DE ANIMES
+   ========================================= */
+.table-container {
+  background-color: var(--roxo-escuro);
+  border-radius: 12px;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  box-shadow: var(--shadow-md);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead {
+  background-color: rgba(9, 11, 24, 0.7);
+}
+
+th {
+  padding: 14px 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--azul-eletrico);
+  border-bottom: 1px solid rgba(139, 92, 246, 0.3);
+  white-space: nowrap;
+}
+
+td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+  vertical-align: middle;
+  font-size: 0.92rem;
+}
+
+/* Destaque sutil no título do anime */
+tbody td:nth-child(2) {
+  font-weight: 600;
+  color: #fff;
+}
+
+tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+  background-color: rgba(139, 92, 246, 0.08);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Colunas e Miniaturas */
+.col-capa { width: 80px; }
+.col-youtube { width: 135px; }
+.col-acoes { width: 165px; }
+
+.table-thumbnail {
+  width: 48px;
+  height: 68px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Botões da Tabela */
+.btn-youtube {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  background-color: rgba(236, 72, 153, 0.15);
+  color: var(--rosa-neon);
+  border: 1px solid var(--rosa-neon);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.btn-youtube:hover {
+  background-color: var(--rosa-neon);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(236, 72, 153, 0.4);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.btn-edit,
+.btn-delete {
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.btn-edit {
+  background-color: rgba(0, 217, 255, 0.12);
+  color: var(--azul-eletrico);
+  border: 1px solid rgba(0, 217, 255, 0.35);
+}
+
+.btn-edit:hover {
+  background-color: var(--azul-eletrico);
+  color: var(--preto);
+  font-weight: 600;
+}
+
+.btn-delete {
+  background-color: rgba(158, 33, 96, 0.25);
+  color: #ff6b9d;
+  border: 1px solid var(--rosa-escuro);
+}
+
+.btn-delete:hover {
+  background-color: var(--rosa-escuro);
+  color: #fff;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+@media (max-width: 960px) {
+  .filter-group {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .filter-actions {
+    width: 100%;
+  }
+
+  .filter-actions .btn-primary,
+  .filter-actions .btn-back {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  .header-actions {
+    width: 100%;
+  }
+
+  .header-actions .btn-back,
+  .header-actions .btn-primary {
+    flex: 1;
+  }
+}

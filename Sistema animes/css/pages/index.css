@@ -1,0 +1,262 @@
+/* banner e topo */
+.hero-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  max-height: 460px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+  display: block;
+}
+
+.user-bar {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: rgba(23, 21, 46, 0.85);
+  padding: 8px 16px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid rgba(0, 217, 255, 0.3);
+  font-size: 13px;
+}
+
+.user-bar strong {
+  color: var(--azul-eletrico);
+}
+
+.btn-sair {
+  background-color: var(--rosa-neon);
+  color: #fff;
+  text-decoration: none;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.btn-sair:hover {
+  background-color: var(--rosa-escuro);
+}
+
+.brand-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--preto);
+  padding: 12px 24px;
+  border-bottom-left-radius: 24px;
+}
+
+.brand-corner h1 {
+  font-size: 26px;
+  color: var(--branco);
+}
+
+.brand-corner h1 span {
+  color: var(--roxo-neon);
+}
+
+/* card premium e categorias */
+.premium-card {
+  background-color: var(--roxo-escuro);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 20px;
+  padding: 24px 20px;
+  width: 300px;
+}
+
+.premium-header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.premium-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--branco);
+}
+
+.premium-header p {
+  font-size: 12px;
+  color: var(--rosa-neon);
+}
+
+.plan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.plan-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border: 1px solid rgba(0, 217, 255, 0.3);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--branco);
+  font-size: 14px;
+}
+
+.plan-price {
+  color: var(--azul-eletrico);
+  font-weight: 600;
+}
+
+.plan-item:hover {
+  border-color: var(--rosa-neon);
+  background-color: rgba(236, 72, 153, 0.12);
+}
+
+.category-cards {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+.cat-card {
+  flex: 1;
+  background-color: var(--roxo-escuro);
+  border: 2px solid var(--roxo-neon);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--azul-eletrico);
+  font-size: 20px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.cat-card:hover {
+  background-color: var(--rosa-neon);
+  border-color: var(--rosa-escuro);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid rgba(139, 92, 246, 0.25);
+  margin: 32px 0;
+}
+
+/* mais procurados */
+.most-searched {
+  background-color: var(--roxo-escuro);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  border-radius: 24px;
+  padding: 28px;
+}
+
+.most-searched h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: var(--branco);
+  border-left: 4px solid var(--azul-eletrico);
+  padding-left: 12px;
+}
+
+.anime-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.anime-card {
+  flex: 1 1 180px;
+  text-decoration: none;
+  color: var(--branco);
+}
+
+.anime-card img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  border: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.anime-card:hover img {
+  border-color: var(--rosa-neon);
+}
+
+.anime-card span {
+  font-size: 14px;
+  display: block;
+}
+
+/* responsividade */
+@media (max-width: 900px) {
+  .hero-banner {
+    aspect-ratio: 16 / 9;
+  }
+
+  .premium-card {
+    width: 100%;
+  }
+
+  .category-cards {
+    width: 100%;
+  }
+
+  .cat-card {
+    padding: 36px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 16px;
+  }
+
+  .brand-corner {
+    padding: 8px 16px;
+  }
+
+  .brand-corner h1 {
+    font-size: 18px;
+  }
+
+  .user-bar {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .category-cards {
+    flex-direction: column;
+  }
+
+  .cat-card {
+    padding: 24px;
+    font-size: 18px;
+  }
+
+  .most-searched {
+    padding: 20px;
+  }
+
+  .anime-card {
+    flex: 1 1 calc(50% - 10px);
+  }
+}

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Novo Anime — AniWorld</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/pages/cadastro_anime.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="page-header-bar">
+        <h2>🎬 Novo Anime</h2>
+        <div class="header-actions">
+          <a href="index.html" class="btn-back">⬅ Voltar ao Menu</a>
+        </div>
+      </div>
+
+      <form method="post" action="" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="" />
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="estudio_id">Estúdio <span>*</span></label>
+            <select name="estudio_id" id="estudio_id" required>
+              <option value="">Selecione um estúdio</option>
+              <option value="1">Studio Ghibli</option>
+              <option value="2">A-1 Pictures</option>
+              <option value="3">Studio Pierrot</option>
+              <option value="4">Toei Animation</option>
+              <option value="5">Bones</option>
+              <option value="6">Trigger</option>
+              <option value="7">Mappa</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="titulo">Título <span>*</span></label>
+            <input
+              type="text"
+              id="titulo"
+              name="titulo"
+              required
+              placeholder="Ex: Solo Leveling, One Piece…"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="ano_lancamento">Ano de Lançamento</label>
+            <input
+              type="number"
+              id="ano_lancamento"
+              name="ano_lancamento"
+              min="1950"
+              max="2030"
+              placeholder="Ex: 2024 (opcional)"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="genero">Gênero <span>*</span></label>
+            <input
+              type="text"
+              id="genero"
+              name="genero"
+              required
+              placeholder="Ex: Shounen, Fantasia, Romance…"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="youtube_link">Link do YouTube <span>*</span></label>
+            <input
+              type="url"
+              id="youtube_link"
+              name="youtube_link"
+              required
+              placeholder="https://www.youtube.com/watch?v=…"
+            />
+            <small
+              >Cole a URL do trailer ou abertura (não do canal ou
+              playlist).</small
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="imagem_capa">Capa do Anime</label>
+            <input
+              type="file"
+              id="imagem_capa"
+              name="imagem_capa"
+              accept="image/*"
+            />
+            <small>JPG ou PNG · Máximo 5 MB</small>
+          </div>
+
+          <div class="form-group full">
+            <label for="sinopse">Sinopse</label>
+            <textarea
+              id="sinopse"
+              name="sinopse"
+              placeholder="Escreva a sinopse aqui (opcional)…"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">➕ Cadastrar</button>
+        </div>
+      </form>
+
+      <h3>🎬 Animes Cadastrados</h3>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th class="col-capa">Capa</th>
+              <th>Título</th>
+              <th>Ano</th>
+              <th class="col-youtube">YouTube</th>
+              <th class="col-acoes">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img
+                  src="assets/solo-leveling.png"
+                  alt="Capa"
+                  class="table-thumbnail"
+                />
+              </td>
+              <td>Solo Leveling</td>
+              <td>2024</td>
+              <td>
+                <a
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-youtube"
+                  >▶ Assistir</a
+                >
+              </td>
+              <td>
+                <div class="action-buttons">
+                  <a href="#" class="btn-edit">✏️ Editar</a>
+                  <a href="#" class="btn-delete">🗑️</a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="assets/fullmetal.png"
+                  alt="Capa"
+                  class="table-thumbnail"
+                />
+              </td>
+              <td>Fullmetal Alchemist: Brotherhood</td>
+              <td>2009</td>
+              <td>
+                <a
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-youtube"
+                  >▶ Assistir</a
+                >
+              </td>
+              <td>
+                <div class="action-buttons">
+                  <a href="#" class="btn-edit">✏️ Editar</a>
+                  <a href="#" class="btn-delete">🗑️</a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
